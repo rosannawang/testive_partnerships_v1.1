@@ -41,6 +41,22 @@
     -moz-flex-wrap: $wrap;
     flex-wrap: $wrap;
 }
+/* mixins for checkmarks in list */
+
+@mixin partnerships-list-item-checkmark-orange {
+    max-width: 400px;
+    position: relative;
+    li:before {
+        background-image: url('../images/checkmark-orange.svg');
+        background-size:contain;
+        content:'';
+        height: 13px;
+        left: 0px;
+        margin-top: 5px;
+        position:absolute;
+        width: 13px;
+    }
+}
 
 /* styles for testive partnerships */
 
@@ -52,18 +68,156 @@
 }
 
 .partnerships-hero {
-
-
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 80px 50px;
+    text-align: center;
+    .partnerships-hero-header {
+        font-size: 45px
+    }
+    .partnerships-hero-orange {
+        color: #F7931E;
+        font-weight: 700;
+    }
 }
 
 .partnerships-social-proof {
+    @include flex;
+    @include flex-direction(column);
+    background-color: #ffffff;
+    padding: 50px;
+    .partnerships-social-proof-header {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    .partnerships-testimonial-body {
+        @include flex;
+        @include flex-direction(row);
+        @include flex-justify-content(center);
+    }
+    .partnerships-testimonial {
+        @include flex;
+        @include flex-direction(column);
+        width: 40%;
+        margin-right: 4%;
+    }
+    .partnerships-testimonial-text {
+        max-width: 440px;
+        padding-bottom: 10px;
+    }
+    .partnerships-testimonial-tagline {
+        @include flex;
+        @include flex-direction(row);
+        @include flex-align-items(center);
+    }
+    .partnerships-testimonial-photo {
+        width: 125px;
+        height: 125px;
+    }
+    .partnerships-testimonial-sub-tagline {
+        @include flex;
+        @include flex-direction(column);
+    }
+    .partnerships-testimonial-name {
+        font-weight: 700;
+    }
+    .partnerships-testimonial-title {
+        font-size: 12px;
+    }
+    .partnerships-casestudy {
+        @include flex;
+        @include flex-direction(column);
+        width: 40%;
+    }
+    .partnerships-casestudy-intro {
 
+    }
+    .partnerships-casestudy-cta {
+        text-align: center;
+    }
+    .partnerships-casestudy-button {
+        background-color: #F7931E;
+        border-radius: 5px;
+        color: #ffffff;
+        margin: 0 auto;
+        padding: 10px 5px;
+        text-align: center;
+        width: 100px;
+
+    }
 }
 
-.partnerships-about-testive {
+.partnerships-about-testive-row {
+    background-color: #2c3e50;
+    padding: 50px 50px 75px 50px;
+    .partnerships-news-header {
+        color: #F7931E;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .partnerships-news-icons-row {
+        @include flex;
+        @include flex-align-items(center);
+        @include flex-direction(row);
+        @include flex-justify-content(center);
+    }
+    .partnerships-news-icons {
+        padding: 25px 25px 50px 25px;
+    }
+    .partnerships-testive-info {
+        @include flex;
+        @include flex-direction(row);
+        @include flex-justify-content(center);
 
-}
+    }
+    .partnerships-molly-video {
+        width: 600px;
+        margin-right: 5%;
+        max-width: 49%;
+    }
+    .partnerships-about-testive-column {
+        color: #ffffff;
+        font-weight: 300;
+        text-align: left;
+        max-width: 35%;
+    }
+    .partnerships-about-testive-header {
+        border-bottom: solid 1px #f7931e;
+        color: #F7931E;
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+    .partnerships-about-testive-blurb {
+        margin-bottom: 10px;
+    }
+    .partnerships-about-testive-list-header {
+        color: #F7931E;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .partnerships-testive-list {
+        @include partnerships-list-item-checkmark-orange;
+        margin: 0 auto;
+        padding-left: 20px;
+        position: relative;
+    }
+    .partnerships-testive-list-item {
+        margin-bottom: 15px;
+    }
+    .partnerships-testive-list-item:last-of-type {
+        margin-bottom: 0px;
+    }}
 
 .partnerships-contact {
-
+    @include flex;
+    @include flex-align-items(center);
+    @include flex-direction(column);
+    background-color: #ffffff;
+    .partnerships-contact-logo-row {
+        @include flex;
+        @include flex-direction(row);
+    }
 }

@@ -1,5 +1,6 @@
 /* flexbox mixins */
 /* mixins for checkmarks in list */
+/*mixins for blue quotation marks*/
 /* styles for testive partnerships */
 .testive-partnerships {
   color: #2c3e50;
@@ -10,29 +11,26 @@
 .partnerships-hero {
   background-color: #2c3e50;
   color: #ffffff;
-  padding: 80px 50px;
+  padding: 100px;
   text-align: center; }
   .partnerships-hero .partnerships-hero-header {
-    font-size: 45px; }
+    font-size: 35px; }
   .partnerships-hero .partnerships-hero-orange {
     color: #F7931E;
-    font-weight: 700; }
+    font-weight: 500; }
 
 .partnerships-social-proof {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: -moz-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  -moz-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  align-content: space-between;
   background-color: #ffffff;
   padding: 50px; }
-  .partnerships-social-proof .partnerships-social-proof-header {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 25px; }
   .partnerships-social-proof .partnerships-testimonial-body {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -51,12 +49,11 @@
     display: -webkit-flex;
     display: -moz-flex;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    -moz-flex-direction: column;
-    flex-direction: column;
-    width: 40%;
-    margin-right: 4%; }
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    padding-left: 10%; }
   .partnerships-social-proof .partnerships-testimonial-text {
     max-width: 440px;
     padding-bottom: 10px; }
@@ -65,17 +62,14 @@
     display: -webkit-flex;
     display: -moz-flex;
     display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    -moz-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    -moz-align-items: center;
-    align-items: center; }
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column; }
   .partnerships-social-proof .partnerships-testimonial-photo {
     width: 125px;
-    height: 125px; }
+    height: 125px;
+    padding: 10px; }
   .partnerships-social-proof .partnerships-testimonial-sub-tagline {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -98,17 +92,140 @@
     -ms-flex-direction: column;
     -moz-flex-direction: column;
     flex-direction: column;
-    width: 40%; }
+    padding-left: 10%; }
+  .partnerships-social-proof .partnerships-casestudy-intro {
+    font-weight: 300;
+    padding: 15px 0px; }
   .partnerships-social-proof .partnerships-casestudy-cta {
-    text-align: center; }
+    font-weight: 500;
+    padding: 15px 0px; }
   .partnerships-social-proof .partnerships-casestudy-button {
+    background-color: #29abe2;
+    border: solid 2px #29abe2;
+    border-radius: 5px;
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 7px 5px;
+    text-align: center;
+    width: 70px; }
+    .partnerships-social-proof .partnerships-casestudy-button:hover {
+      background-color: #ffffff;
+      color: #29abe2; }
+
+.partnerships-love {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  background-color: #2c3e50;
+  padding: 50px;
+  color: #ffffff; }
+  .partnerships-love .partnerships-love-header {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    padding-bottom: 15px; }
+  .partnerships-love .partnerships-love-benefitsrow {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    font-weight: 300;
+    padding-top: 30px; }
+  .partnerships-love .partnerships-love-benefit-1 {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    padding: 0px 25px; }
+  .partnerships-love .partnerships-love-benefit-2 {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    padding: 0px 25px; }
+  .partnerships-love .partnerships-love-benefit-3 {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    padding: 0px 25px; }
+  .partnerships-love .partnerships-love-benefit-header {
+    color: #f7931e;
+    border-bottom: solid 1px #F7931E;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-size: 20px; }
+  .partnerships-love .partnerships-love-benefit-info {
+    padding-bottom: 30px; }
+  .partnerships-love .partnerships-love-button {
+    border: solid 1px #f7931e;
+    border-radius: 5px;
+    color: #f7931e;
+    font-weight: 500;
+    margin: 0 auto;
+    padding: 10px 5px;
+    text-align: center;
+    width: 100px; }
+    .partnerships-love .partnerships-love-button:hover {
+      background-color: #f7931e;
+      color: #2c3e50; }
+
+.partnerships-contact {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  padding: 50px;
+  justify-content: center;
+  align-items: center; }
+  .partnerships-contact .partnerships-contact-header {
+    color: #29ABE2;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center; }
+  .partnerships-contact .partnerships-contact-text {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    padding: 20px; }
+  .partnerships-contact .partnerships-contact-button {
     background-color: #F7931E;
+    border: solid 2px #f7931e;
     border-radius: 5px;
     color: #ffffff;
     margin: 0 auto;
     padding: 10px 5px;
     text-align: center;
-    width: 100px; }
+    width: 150px; }
+    .partnerships-contact .partnerships-contact-button:hover {
+      background-color: #ffffff;
+      color: #f7931e; }
 
 .partnerships-about-testive-row {
   background-color: #2c3e50;
@@ -153,7 +270,8 @@
   .partnerships-about-testive-row .partnerships-molly-video {
     width: 600px;
     margin-right: 5%;
-    max-width: 49%; }
+    max-width: 49%;
+    padding-top: 30px; }
   .partnerships-about-testive-row .partnerships-about-testive-column {
     color: #ffffff;
     font-weight: 300;
@@ -191,7 +309,7 @@
   .partnerships-about-testive-row .partnerships-testive-list-item:last-of-type {
     margin-bottom: 0px; }
 
-.partnerships-contact {
+.partnerships-schools {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: -moz-flex;
@@ -204,8 +322,14 @@
   -ms-flex-direction: column;
   -moz-flex-direction: column;
   flex-direction: column;
-  background-color: #ffffff; }
-  .partnerships-contact .partnerships-contact-logo-row {
+  background-color: #ffffff;
+  padding: 50px; }
+  .partnerships-schools .partnerships-contact-schools-header {
+    color: #f7931e;
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 15px; }
+  .partnerships-schools .partnerships-contact-logo-row {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: -moz-flex;
@@ -213,4 +337,10 @@
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     -moz-flex-direction: row;
-    flex-direction: row; }
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    -moz-align-items: center;
+    align-items: center; }
+  .partnerships-schools .partnerships-contact-logo {
+    padding: 25px 30px; }

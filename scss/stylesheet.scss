@@ -57,21 +57,7 @@
         width: 13px;
     }
 }
-/*mixins for blue quotation marks*/
-@mixin partnerships-quote-blue {
-    max-width: 400px;
-    position: relative;
-    p:before {
-        background-image: url('../images/bluequotes.svg');
-        background-size:contain;
-        content:'';
-        height: 13px;
-        left: 0px;
-        margin-top: 5px;
-        position:absolute;
-        width: 13px;
-    }
-}
+
 /* styles for testive partnerships */
 
 .testive-partnerships {
@@ -87,7 +73,7 @@
     padding: 100px;
     text-align: center;
     .partnerships-hero-header {
-        font-size: 35px
+        font-size: 42px
     }
     .partnerships-hero-orange {
         color: #F7931E;
@@ -97,34 +83,48 @@
 
 .partnerships-social-proof {
     @include flex;
+    @include flex-align-items(center);
     @include flex-direction(row);
-    align-content: space-between;
+    @include flex-justify-content(center);
     background-color: #ffffff;
     padding: 50px;
     .partnerships-testimonial-body {
         @include flex;
-        @include flex-direction(row);
+        @include flex-direction(column);
         @include flex-justify-content(center);
+        margin-right: 3%;
+        max-width: 49%;
     }
     .partnerships-testimonial {
         @include flex;
         @include flex-direction(row);
-        padding-left: 10%;
+    }
+    .bluequotes {
+        height: 10px;
+        width: 10px;
+        padding-bottom: 10px;
+        padding-right: 5px;
     }
     .partnerships-testimonial-text {
-        max-width: 440px;
-        padding-bottom: 10px;
+        font-size: 15px;
+        max-width: 400px;
+        padding-bottom: 15px;
+    }
+    .partnerships-testimonial-emphasis {
+        font-size: 18px;
+        font-weight: 700;
     }
     .partnerships-testimonial-tagline {
         @include flex;
-        @include flex-direction(column);
+        @include flex-direction(row);
+        @include flex-align-items(flex-end);
     }
     .partnerships-testimonial-photo {
-        width: 125px;
-        height: 125px;
-        padding: 10px;
+        width: 60px;
+        height: 60px;
+        padding-right: 15px;
     }
-    .partnerships-testimonial-sub-tagline {
+    .partnerships-testimonial-author {
         @include flex;
         @include flex-direction(column);
     }
@@ -137,28 +137,48 @@
     .partnerships-casestudy {
         @include flex;
         @include flex-direction(column);
-        padding-left: 10%
+        @include flex-justify-content(center);
+        max-width: 49%;
     }
     .partnerships-casestudy-intro {
-        font-weight: 300;
-        padding: 15px 0px;
+        color: #29abe2;
+        font-size: 22px;
+        font-weight: 500;
     }
     .partnerships-casestudy-cta {
+        border-bottom: 1px solid #eaeaea;
         font-weight: 500;
+        margin-bottom: 20px;
         padding: 15px 0px;
     }
-    .partnerships-casestudy-button {
+    .partnerships-form {
+        @include flex;
+        @include flex-direction(row);
+        @include flex-align-items(flex-end);
+    }
+    .hs-input {
+        margin-right: 30px;
+        padding: 7px 40px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: solid 1px #2c3e50;
+    }
+    .hs-button {
         background-color: #29abe2;
         border: solid 2px #29abe2;
         border-radius: 5px;
         color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
         margin: 0 auto;
         padding: 7px 5px;
         text-align: center;
+        transition-duration: .25s;
         width: 70px;
         &:hover {
             background-color: #ffffff;
             color: #29abe2;
+            cursor: pointer;
         }
     }
 }
@@ -171,7 +191,7 @@
     color: #ffffff;
     .partnerships-love-header {
         text-align: center;
-        font-size: 22px;
+        font-size: 26px;
         font-weight: 500;
         padding-bottom: 15px;
     }
@@ -181,41 +201,34 @@
         font-weight: 300;
         padding-top: 30px;
     }
-    .partnerships-love-benefit-1 {
+    .partnerships-love-benefit {
         @include flex;
         @include flex-direction(column);
-        padding: 0px 25px;
-    }
-    .partnerships-love-benefit-2 {
-        @include flex;
-        @include flex-direction(column);
-        padding: 0px 25px;
-    }
-    .partnerships-love-benefit-3 {
-        @include flex;
-        @include flex-direction(column);
-        padding: 0px 25px;
+        padding: 0px 30px;
     }
 
     .partnerships-love-benefit-header {
         color: #f7931e;
-        border-bottom: solid 1px #F7931E;
-        margin-bottom: 20px;
+        border-bottom: solid 1px rgba(255, 255, 255, .2);
+        font-size: 20px;
+        margin: 0 auto;
+        margin-bottom: 15px;
         padding-bottom: 10px;
         text-align: center;
-        text-size: 20px;
+        width: 375px;
     }
     .partnerships-love-benefit-info {
         padding-bottom: 30px;
     }
     .partnerships-love-button {
-        border: solid 1px #f7931e;
+        border: solid 2px #f7931e;
         border-radius: 5px;
         color: #f7931e;
-        font-weight: 500;
+        font-weight: 700;
         margin: 0 auto;
         padding: 10px 5px;
         text-align: center;
+        transition-duration: .5s;
         width: 100px;
         &:hover {
             background-color: #f7931e;
@@ -227,21 +240,24 @@
 
 .partnerships-contact {
     @include flex;
+    @include flex-align-items(center);
     @include flex-direction(column);
     padding: 50px;
-    justify-content: center;
-    align-items: center;
     .partnerships-contact-header {
         color: #29ABE2;
-        font-size: 22px;
+        font-size: 26px;
         font-weight: 700;
+        padding-bottom: 10px;
         text-align: center;
+    }
+    .partnerships-contact-photo {
+        padding-bottom: 10px;
     }
     .partnerships-contact-text {
         font-size: 18px;
-        font-weight: 300;
+        font-weight: 400;
+        padding-bottom: 15px;
         text-align: center;
-        padding: 20px;
     }
     .partnerships-contact-button {
         background-color: #F7931E;
@@ -251,6 +267,7 @@
         margin: 0 auto;
         padding: 10px 5px;
         text-align: center;
+        transition-duration: .5s;
         width: 150px;
         &:hover {
             background-color: #ffffff;
@@ -264,7 +281,7 @@
     padding: 50px 50px 75px 50px;
     .partnerships-news-header {
         color: #F7931E;
-        font-size: 22px;
+        font-size: 26px;
         font-weight: 700;
         text-align: center;
     }
@@ -284,6 +301,7 @@
 
     }
     .partnerships-molly-video {
+        background-color: #fff;
         width: 600px;
         margin-right: 5%;
         max-width: 49%;
@@ -331,7 +349,7 @@
     padding: 50px;
     .partnerships-contact-schools-header {
         color: #f7931e;
-        font-size: 22px;
+        font-size: 26px;
         font-weight: 700;
         padding-bottom: 15px;
     }
@@ -342,5 +360,19 @@
     }
     .partnerships-contact-logo {
         padding: 25px 30px;
+    }
+}
+
+@media only screen and (max-width: 978px) {
+    .partnerships-hero {
+        .partnerships-hero-header {
+
+        }
+    }
+}
+
+@media only screen and (max-width: 952px) {
+    .partnerships-social-proof {
+
     }
 }
